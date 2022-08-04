@@ -1,0 +1,17 @@
+.sideNavBar {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+}
+.userName {
+}
+.menuList {
+}
+.homeMenu {
+}
+.myBookMenu {
+}
+.messageMenu {
+}
+.settingMenu {
+}

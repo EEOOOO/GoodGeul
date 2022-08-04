@@ -1,0 +1,16 @@
+.sideNavBar {
+  display: flex;
+  flex-direction: column;
+}
+.userName {
+}
+.menuList {
+}
+.homeMenu {
+}
+.myBookMenu {
+}
+.messageMenu {
+}
+.settingMenu {
+}

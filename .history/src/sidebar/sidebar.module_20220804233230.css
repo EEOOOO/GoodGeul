@@ -1,0 +1,30 @@
+.sideNavBar {
+  box-sizing: bordre-box;
+  display: flex;
+  width: 15vw;
+  flex-direction: column;
+  border-right: 1px solid lightgray;
+  padding: 20px;
+}
+.userName {
+}
+.menuList {
+  height: 50%;
+  list-style: none;
+  font-size: 20px;
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: 500;
+}
+.homeMenu {
+}
+.myBookMenu {
+}
+.messageMenu {
+}
+.settingMenu {
+}

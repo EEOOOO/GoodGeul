@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import styles from './app.module.css';
 import MyBooks from './mybooks/MyBooks';
-import SideNavBar from './sidenavbar/SideNavBar';
+import SideBar from './sidenavbar/SideNavBar';
 const sayHello = 'You can do it';
 const books = [
   {

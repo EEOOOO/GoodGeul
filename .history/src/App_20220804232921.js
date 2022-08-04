@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import styles from './app.module.css';
 import MyBooks from './mybooks/MyBooks';
-import SideNavBar from './sidenavbar/SideNavBar';
+import SideBar from './sidebar/SideBar';
 const sayHello = 'You can do it';
 const books = [
   {
@@ -26,7 +26,7 @@ const books = [
 function App() {
   return (
     <div className={styles.app}>
-      <SideNavBar />
+      <SideBar />
       <MyBooks  sayHello={sayHello} books={books}/>
     </div>
   );
