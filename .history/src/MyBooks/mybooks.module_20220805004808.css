@@ -1,0 +1,9 @@
+.myBooks {
+  padding: 50px;
+}
+.myBookSearch {
+  border: none;
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 16px 5px rgba(180, 180, 180, 0.66);
+  box-shadow: 5px 5px 16px 5px rgba(180, 180, 180, 0.66);
+}

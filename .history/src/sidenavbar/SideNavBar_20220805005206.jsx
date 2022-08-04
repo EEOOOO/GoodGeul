@@ -4,8 +4,10 @@ class SideNavBar extends Component {
     render() {
         return (
             <div className={styles.sideNavBar}>
-                <div className={styles.userName}>
-                    WooYoon Lee
+                <div className={styles.user}>
+                    <p className={styles.userName}>
+                        WooYoon Lee
+                    </p>
                     <div className={styles.nameTagColor}></div>
                 </div>
                 

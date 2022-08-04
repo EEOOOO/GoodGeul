@@ -1,0 +1,28 @@
+.myBooks {
+  padding: 50px;
+}
+.myBookSearch {
+  border: none;
+  width: 300px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(180, 180, 180, 0.66);
+  box-shadow: 0px 2px 3px 0px rgba(180, 180, 180, 0.66);
+  text-align: right;
+}
+.myBookSearch::placeholder {
+  color: lightgrey;
+}
+.newBookButton {
+}
+.headerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selectInput {
+  padding: 13px;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  font-weight: 700;
+}

@@ -7,7 +7,7 @@ class MyBooks extends React.Component{
             <header className={styles.mybookHeader}>
                 <div className={styles.headerTop}>
                     <div className={styles.headerTopLeft}>
-                        <input type='text' className={styles.myBookSearch} placeholder={'Search your book'}></input>
+                    <input type='text' className={styles.myBookSearch} placeholder={'Search your book'}></input>
                     </div>
                     <div className={styles.headerTopRight}>
                         <span>🔔</span>

@@ -20,7 +20,7 @@
   transition: transform 0.1s ease-in;
 }
 .book:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 .title {
   color: white;

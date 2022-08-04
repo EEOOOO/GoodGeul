@@ -9,11 +9,9 @@
 .userName {
   font-weight: 700;
   font-size: 30px;
-  margin: 30px 0;
 }
 .nameTagColor {
   display: inline-block;
-  bottom: 10px;
   margin-left: 10px;
   width: 20px;
   height: 8px;
