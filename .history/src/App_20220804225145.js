@@ -19,7 +19,7 @@ const books = [
     id:3,
     title:'Don\'t give up',
     author:'Winnie',
-    description:'I hope I could finish this project successfully💙',
+    description:'I hope I could finish this project successfully',
   }
 ]
 function App() {

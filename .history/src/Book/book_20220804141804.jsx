@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+
+class Book extends Component {
+    constructor(props){
+        super(props);
+        this.book = this.props.book;
+    }
+    const id = this.book[0];
+        const title = this.book[1];
+        const author = this.book[2];
+        console.log(id, title, author);
+    render() {
+        return (
+            <li>
+                <p>{id}</p>
+                <h1>{title}</h1>
+                <h3>{author}</h3>
+            </li>
+        );
+    }
+}
+
+export default Book;

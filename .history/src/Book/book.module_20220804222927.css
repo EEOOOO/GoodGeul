@@ -1,0 +1,15 @@
+.book {
+  background: rgb(117, 125, 232);
+  background: linear-gradient(
+    146deg,
+    rgba(117, 125, 232, 1) 41%,
+    rgba(142, 206, 255, 1) 93%
+  );
+  width: 150px;
+  height: 200px;
+  border-radius: 0 10px 10px 0;
+  padding: 5px;
+  margin: 10px;
+  -webkit-box-shadow: 10px 10px 22px -1px #6e6e6e;
+  box-shadow: 10px 10px 22px -1px #6e6e6e;
+}

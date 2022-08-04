@@ -6,20 +6,17 @@ const books = [
   {
     id:1,
     title:'Stoner',
-    author:'William',
-    description:'The book about the guy who was greate professor',
+    author:'William'
   },
   {
     id:2,
     title:'Fish doesn\'t exist',
-    author:'David',
-    description:'It\'s the most surprising book in this year',
+    author:'David'
   },
   {
     id:3,
     title:'Don\'t give up',
-    author:'Winnie',
-    description:'I hope I could finish this project successfully💙',
+    author:'Winnie'
   }
 ]
 function App() {

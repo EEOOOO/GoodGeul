@@ -1,0 +1,17 @@
+import React, { Component } from 'react';
+import Book from '../book/Book';
+class Books extends Component {
+    render() {
+        return (
+            <ul>
+                {this.props.books.map((book)=>{ 
+                    const key = book['id'];
+                        return <Book book={book} key={book.toString()}/>
+                })}
+                <li>{'why..'}</li>
+            </ul>
+        );
+    }
+}
+
+export default Books;
