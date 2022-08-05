@@ -53,3 +53,7 @@
   font-weight: 700;
   cursor: pointer;
 }
+.selectOption {
+  padding: 15px;
+  font-color: red;
+}

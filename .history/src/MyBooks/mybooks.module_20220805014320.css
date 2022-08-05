@@ -53,3 +53,6 @@
   font-weight: 700;
   cursor: pointer;
 }
+.selectInput > option {
+  padding: 15px;
+}

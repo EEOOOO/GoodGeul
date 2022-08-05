@@ -29,7 +29,7 @@
   boder: none;
   background-color: black;
   boder: none;
-  padding: 15px 25px;
+  padding: 13px 20px;
   border-radius: 20px;
   font-size: 10px;
   cursor: pointer;
@@ -37,7 +37,7 @@
 }
 .newBookButton:hover {
   transform: scale(1.1);
-  box-shadow: 5px 5px rgb(255, 100, 100);
+  box-shadow: 5px 5px #99bdff;
 }
 .headerBottom {
   display: flex;

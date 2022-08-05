@@ -29,15 +29,15 @@
   boder: none;
   background-color: black;
   boder: none;
-  padding: 15px 25px;
+  padding: 13px 20px;
   border-radius: 20px;
   font-size: 10px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 .newBookButton:hover {
-  transform: scale(1.1);
-  box-shadow: 5px 5px rgb(255, 100, 100);
+  transform: scale(1.01);
+  box-shadow: 8px 8px #99bdff;
+  transition: 0.3s;
 }
 .headerBottom {
   display: flex;
