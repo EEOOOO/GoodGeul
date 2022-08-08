@@ -1,0 +1,12 @@
+.bookPopUp {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: pink;
+}
+.bookPopUpForm {
+  display: flex;
+  flex-direction: column;
+}

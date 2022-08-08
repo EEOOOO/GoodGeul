@@ -1,0 +1,22 @@
+.bookPopUp {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: pink;
+  width: 50vw;
+  heigth: 80vh;
+}
+.bookPopUpForm {
+  display: flex;
+  flex-direction: column;
+}
+.bookPopUpForm input {
+  width: 30%;
+  margin-bottom: 20px;
+}
+.editor {
+  height: 80%;
+}

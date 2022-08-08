@@ -1,0 +1,35 @@
+.bookPopUp {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  background-color: white;
+  border-radius: 3px;
+  width: 50vw;
+  heigth: 80vh;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(180, 180, 180, 0.66);
+  box-shadow: 0px 2px 3px 0px rgba(180, 180, 180, 0.66);
+}
+.bookPopUpTitle {
+  padding: 10px;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+.bookPopUpForm {
+  display: flex;
+  flex-direction: column;
+}
+.bookPopUpForm input {
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.editor {
+  height: 200px;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+  overflow-y: scroll;
+}

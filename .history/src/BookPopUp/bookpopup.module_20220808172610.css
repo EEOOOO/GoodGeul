@@ -1,0 +1,28 @@
+.bookPopUp {
+  margin: auto;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 50vw;
+  heigth: 80vh;
+}
+.bookPopUpForm {
+  display: flex;
+  flex-direction: column;
+}
+.bookPopUpForm input {
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.editor {
+  height: 200px;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}

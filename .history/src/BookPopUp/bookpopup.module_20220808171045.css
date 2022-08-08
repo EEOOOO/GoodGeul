@@ -1,0 +1,5 @@
+.bookPopUp {
+  position: absolute;
+  display: flex;
+  background-color: white;
+}

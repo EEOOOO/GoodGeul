@@ -1,0 +1,7 @@
+.bookPopUp {
+  display: relative;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: pink;
+}
