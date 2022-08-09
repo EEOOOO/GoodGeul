@@ -25,7 +25,7 @@ class BookPopUp extends Component {
         const name = target.name;
         const value = target.value;
         this.setState({
-            ['id']: new Date().getTime.toString(),
+            [id]: new Date().getTime.toString(),
             [name]: value,
         });
     }

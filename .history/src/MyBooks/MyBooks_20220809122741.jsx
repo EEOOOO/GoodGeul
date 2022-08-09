@@ -9,7 +9,7 @@ class MyBooks extends React.Component{
             bookList: this.props.books,
             showPopUp : false,            
         };
-        this.updateBookList = this.updateBookList.bind(this);
+        //this.updateBookList = this.updateBookList.bind(this);
     }
     handleTextSubmit=()=>{
         console.dir(this.props.myEditor.state.editorState);
@@ -56,7 +56,7 @@ class MyBooks extends React.Component{
                 </div>
             </header>
             <div className={styles.myBooksBody}>
-                <Books books={this.state.bookList}/>
+                <Books books={this.props.books}/>
                 {/* <div className={styles.textEditor}>
                     {this.props.myEditor}
                     <button onClick={this.handleTextSubmit}>submit</button>

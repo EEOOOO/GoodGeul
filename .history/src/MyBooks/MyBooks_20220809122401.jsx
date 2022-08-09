@@ -22,10 +22,6 @@ class MyBooks extends React.Component{
         console.dir(this.state);
     }
     updateBookList = (book) => { //state undefined고치려고 일단 시도됨.
-        console.dir(this.state);
-        console.dir(this.props);
-        console.dir(book);
-        console.dir(this.state.bookList);
         const newBookList = [...this.state.bookList, book];
         this.setState({bookList:newBookList});
         console.dir(this.state.bookList);
@@ -56,7 +52,7 @@ class MyBooks extends React.Component{
                 </div>
             </header>
             <div className={styles.myBooksBody}>
-                <Books books={this.state.bookList}/>
+                <Books books={this.props.books}/>
                 {/* <div className={styles.textEditor}>
                     {this.props.myEditor}
                     <button onClick={this.handleTextSubmit}>submit</button>

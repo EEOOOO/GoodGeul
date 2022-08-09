@@ -6,10 +6,9 @@ class MyBooks extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            showPopUp : false,
             bookList: this.props.books,
-            showPopUp : false,            
         };
-        this.updateBookList = this.updateBookList.bind(this);
     }
     handleTextSubmit=()=>{
         console.dir(this.props.myEditor.state.editorState);
@@ -19,17 +18,6 @@ class MyBooks extends React.Component{
         this.setState({
             showPopUp : !this.state.showPopUp
         });
-        console.dir(this.state);
-    }
-    updateBookList = (book) => { //state undefined고치려고 일단 시도됨.
-        console.dir(this.state);
-        console.dir(this.props);
-        console.dir(book);
-        console.dir(this.state.bookList);
-        const newBookList = [...this.state.bookList, book];
-        this.setState({bookList:newBookList});
-        console.dir(this.state.bookList);
-        console.dir(this.state);
     }
     render(){
         return <div className={styles.myBooks}>
@@ -56,14 +44,14 @@ class MyBooks extends React.Component{
                 </div>
             </header>
             <div className={styles.myBooksBody}>
-                <Books books={this.state.bookList}/>
+                <Books books={this.props.books}/>
                 {/* <div className={styles.textEditor}>
                     {this.props.myEditor}
                     <button onClick={this.handleTextSubmit}>submit</button>
                 </div> */}
             </div>
             {this.state.showPopUp ?
-                <BookPopUp showPopUp={this.state.showPopUp} bookList={this.state.bookList} updateBookList={this.updateBookList}/>
+                <BookPopUp showPopUp={this.state.showPopUp}/>
                 : null}
         </div>
     }

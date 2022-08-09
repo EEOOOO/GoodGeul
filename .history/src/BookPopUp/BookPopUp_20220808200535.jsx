@@ -9,29 +9,17 @@ class BookPopUp extends Component {
     constructor(props){
         super(props);
         this.showPopUp = this.props.showPopUp;
-        this.bookList = this.props.bookList;
-        this.state = {
+        state = {
             id:'',
             title:'',
             author:'',
             description:'',
         }
-        this.updateBook = this.props.updateBookList.bind(this); //state undefined고치려고 일단 시도됨.
-        this.handleSubmit = this.handleSubmit.bind(this); //state undefined고치려고 일단 시도됨.
-        this.handleChange = this.handleChange.bind(this); //state undefined고치려고 일단 시도됨.
-    }
-    handleChange = (event) => {
-        const target = event.target;
-        const name = target.name;
-        const value = target.value;
-        this.setState({
-            ['id']: new Date().getTime.toString(),
-            [name]: value,
-        });
+        this.updateBook = this.props.updateBookList;
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        this.updateBook(this.state);
+        console.dir(event);
     }
     render() {
         return (
@@ -39,13 +27,13 @@ class BookPopUp extends Component {
                 <h1 className={styles.bookPopUpTitle}>Add New Book</h1>
                 <form className={styles.bookPopUpForm}>
                     <label >Title</label>
-                    <input type="text" value={this.state.title} name='title' onChange={this.handleChange}></input>
+                    <input type="text" value={this.state.title} onChange={handleChange}></input>
 
                     <label>Author</label>
-                    <input type="text" className={styles.inputAuthor} name='author'  value={this.state.author} onChange={this.handleChange}></input>
+                    <input type="text" className={styles.inputAuthor} value={this.state.author} onChange={handleChange}></input>
 
                     <label>summary</label>
-                    <input type="text" className={styles.inputDescription} name='description' value={this.state.description} onChange={this.handleChange}></input>
+                    <input type="text" className={styles.inputDescription} value={this.state.description}onChange={handleChange}></input>
 
                     <label>Review or Memo</label>
                     <div className={styles.editor}>

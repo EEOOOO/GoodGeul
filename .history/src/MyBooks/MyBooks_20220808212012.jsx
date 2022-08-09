@@ -2,6 +2,7 @@ import React from 'react';
 import BookPopUp from '../BookPopUp/BookPopUp';
 import Books from '../books/Books';
 import styles from './mybooks.module.css';
+import { setState } from 'react';
 class MyBooks extends React.Component{
     constructor(props){
         super(props);
@@ -9,7 +10,6 @@ class MyBooks extends React.Component{
             bookList: this.props.books,
             showPopUp : false,            
         };
-        this.updateBookList = this.updateBookList.bind(this);
     }
     handleTextSubmit=()=>{
         console.dir(this.props.myEditor.state.editorState);
@@ -19,16 +19,14 @@ class MyBooks extends React.Component{
         this.setState({
             showPopUp : !this.state.showPopUp
         });
-        console.dir(this.state);
     }
-    updateBookList = (book) => { //state undefined고치려고 일단 시도됨.
-        console.dir(this.state);
-        console.dir(this.props);
+    updateBookList = (book) => {
+        console.dir(this.props.state);
         console.dir(book);
         console.dir(this.state.bookList);
-        const newBookList = [...this.state.bookList, book];
-        this.setState({bookList:newBookList});
-        console.dir(this.state.bookList);
+        this.state.bookList = this.setState(prevState => ({
+            bookList: prevState.bookList
+        }));
         console.dir(this.state);
     }
     render(){
@@ -56,7 +54,7 @@ class MyBooks extends React.Component{
                 </div>
             </header>
             <div className={styles.myBooksBody}>
-                <Books books={this.state.bookList}/>
+                <Books books={this.props.books}/>
                 {/* <div className={styles.textEditor}>
                     {this.props.myEditor}
                     <button onClick={this.handleTextSubmit}>submit</button>

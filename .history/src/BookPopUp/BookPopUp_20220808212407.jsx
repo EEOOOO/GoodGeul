@@ -9,14 +9,13 @@ class BookPopUp extends Component {
     constructor(props){
         super(props);
         this.showPopUp = this.props.showPopUp;
-        this.bookList = this.props.bookList;
         this.state = {
             id:'',
             title:'',
             author:'',
             description:'',
         }
-        this.updateBook = this.props.updateBookList.bind(this); //state undefined고치려고 일단 시도됨.
+        this.updateBook = this.props.updateBookList.bind(this);  //state undefined고치려고 일단 시도됨.
         this.handleSubmit = this.handleSubmit.bind(this); //state undefined고치려고 일단 시도됨.
         this.handleChange = this.handleChange.bind(this); //state undefined고치려고 일단 시도됨.
     }
@@ -25,7 +24,6 @@ class BookPopUp extends Component {
         const name = target.name;
         const value = target.value;
         this.setState({
-            ['id']: new Date().getTime.toString(),
             [name]: value,
         });
     }
