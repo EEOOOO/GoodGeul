@@ -60,7 +60,7 @@ class MyBooks extends React.Component{
                     showPopUp={this.state.showPopUp} 
                     bookList={this.state.bookList}
                     updateBookList={this.updateBookList}
-                    closePopUp={this.handleNewBookBtnClicked}
+                    closeButton={this.handleNewBookBtnClicked}
                     />
                 : null}
         </div>

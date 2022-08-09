@@ -32,15 +32,12 @@ class BookPopUp extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.updateBook(this.state);
-        this.props.closePopUp();
     }
     render() {
         return (
             <div className={styles.bookPopUp}>
-                <div className={styles.bookPopUpTitle}>
-                    <h1>Add New Book</h1>
-                    <button className={styles.popUpCloseButton} onClick={this.props.closePopUp}>Close</button>
-                </div>
+                <div className={styles.bookPopUpTitle}></div>
+                <h1>Add New Book</h1>
                 <form className={styles.bookPopUpForm}>
                     <label >Title</label>
                     <input type="text" value={this.state.title} name='title' onChange={this.handleChange}></input>

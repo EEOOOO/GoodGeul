@@ -19,7 +19,7 @@
   color: white;
   display: flex;
   justify-content: space-between;
-  //align-items: center;
+  align-items: center;
 }
 .popUpCloseButton {
   background-color: white;
@@ -27,10 +27,7 @@
   width: 3rem;
   height: 1.5rem;
   font-size: 0.5rem;
-  cursor: pointer;
-}
-.popUpCloseButton:hover {
-  font-weight: 700;
+  margin-right: 10px;
 }
 .bookPopUpForm {
   display: flex;

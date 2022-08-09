@@ -29,9 +29,6 @@
   font-size: 0.5rem;
   cursor: pointer;
 }
-.popUpCloseButton:hover {
-  font-weight: 700;
-}
 .bookPopUpForm {
   display: flex;
   flex-direction: column;
