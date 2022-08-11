@@ -1,0 +1,31 @@
+import styles from './app.module.css';
+import MyBooks from './mybooks/MyBooks';
+import SideNavBar from './sidenavbar/SideNavBar';
+import database from './firebase';
+import { getDatabase, ref, set } from "firebase/database";
+
+function saveBook(title, author, description, Text) {
+  set(ref(database, 'users/' + userId), {
+    title: title,
+    author: author,
+    description : description,
+    Text : Text
+  });
+}
+
+const booksRef = ref(database, 'posts/' + postId + '/starCount');
+onValue(booksRef, (snapshot)=>{
+  const books = snapshot.val();
+})
+function App() {
+  return (
+    <div className={styles.app}>
+      <SideNavBar />
+      <MyBooks 
+       books={books} 
+       saveBook={saveBook} />
+    </div>
+  );
+}
+
+export default App;

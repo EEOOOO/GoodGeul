@@ -1,0 +1,12 @@
+.bookContent {
+  display: flex;
+  flex: 1 1 1;
+  height: 100vh;
+}
+.book {
+  display: flex;
+}
+.bookInfo {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,12 @@
+.app {
+  height: 100vh;
+  display: flex;
+  position: absolute;
+}
+.sideNavBar {
+  height: 100vh;
+  background-color: gray;
+}
+.bookContent {
+  top: 200px;
+}

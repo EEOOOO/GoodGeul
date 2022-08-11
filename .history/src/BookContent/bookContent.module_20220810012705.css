@@ -1,0 +1,4 @@
+.bookContent {
+  display: flex;
+  flex: 1 1 3;
+}
