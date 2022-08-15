@@ -1,9 +1,9 @@
 import styles from './app.module.css';
 import MyBooks from './mybooks/MyBooks';
 import SideNavBar from './sidenavbar/SideNavBar';
-import {Outlet,  useLocation} from 'react-router-dom';
+import {Outlet, Link, useLocation} from 'react-router-dom';
 import database from './services/db_service';
-import {ref, set} from "firebase/database";
+import {ref, set, get, child} from "firebase/database";
 import BookContent from './BookContent/BookContent';
 
 
@@ -23,7 +23,7 @@ function App() {
   console.log(state);
 
   const saveBook = (id, title, author, description, Text) => {
-    set(ref(database,'users/'+`${state.userId}`),{
+    set(ref(`${database},${state.userId}),{
       title: title,
       author: author,
       description : description,
