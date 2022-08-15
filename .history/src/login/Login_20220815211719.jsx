@@ -6,15 +6,11 @@ const Login = ({authService}) => {
     const navigate = useNavigate();
 
     const goToMyGoodGeul = userId => {
-        navigate('/app',{
-            state:{
-                userId
-            }
-        });
+        navigate.push('/MyBooks/userId');
     }
     const handleLogin = (event) => {
         authService.login(event.target.id)
-        .then(data => goToMyGoodGeul(data.user.uid));
+        .then(data => goToMyGoodGeul(datauser.uid));
     }
     return (
         <div className={styles.loginBox}>

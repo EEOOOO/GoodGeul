@@ -1,20 +1,16 @@
 import React from 'react';
 import styles from './login.module.css';
-import {useNavigate} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 const Login = ({authService}) => {
-    const navigate = useNavigate();
+    const history = useHistory();
 
     const goToMyGoodGeul = userId => {
-        navigate('/app',{
-            state:{
-                userId
-            }
-        });
+        history.push('/MyBooks/userId');
     }
     const handleLogin = (event) => {
         authService.login(event.target.id)
-        .then(data => goToMyGoodGeul(data.user.uid));
+        .then(data => goToMyGoodGeul(datauser.uid));
     }
     return (
         <div className={styles.loginBox}>

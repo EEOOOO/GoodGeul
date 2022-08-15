@@ -9,7 +9,7 @@ class AuthService{
         const provider = this.getProvider(providerName);
         
         const auth = getAuth(app);
-        return await signInWithPopup(auth, provider)
+        return signInWithPopup(auth, provider)
     }
     getProvider(providerName){
         switch(providerName){

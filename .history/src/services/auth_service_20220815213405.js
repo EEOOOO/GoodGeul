@@ -5,11 +5,11 @@ class AuthService{
         this.googleProvider = new GoogleAuthProvider();
         this.githubProvider = new GithubAuthProvider();
     }
-    async login(providerName){
+    login(providerName){
         const provider = this.getProvider(providerName);
         
         const auth = getAuth(app);
-        return await signInWithPopup(auth, provider)
+        return signInWithPopup(auth, provider)
     }
     getProvider(providerName){
         switch(providerName){

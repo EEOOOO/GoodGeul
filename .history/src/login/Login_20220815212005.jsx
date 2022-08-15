@@ -6,10 +6,9 @@ const Login = ({authService}) => {
     const navigate = useNavigate();
 
     const goToMyGoodGeul = userId => {
-        navigate('/app',{
-            state:{
-                userId
-            }
+        navigate.push({
+            pathName:'/App',
+            state:{ userId }
         });
     }
     const handleLogin = (event) => {

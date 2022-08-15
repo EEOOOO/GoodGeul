@@ -13,9 +13,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login authService={authService}/>}/>
+      <Route path="/" element={<Login authService={authService}/>}>
       <Route path="app" element={<App />}/>
       <Route path="bookContent" element={<BookContent />}/>
+      </Route>
     </Routes>
     
   </BrowserRouter>
