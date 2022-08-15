@@ -6,8 +6,9 @@ import SideNavBar from '../sidenavbar/SideNavBar';
 class BookContent extends Component {
     render() {
         return (
-            <div className={styles.bookContent}>
+            <>
                 <SideNavBar/>
+            <div className={styles.bookContent}>
                 <div className={styles.book}>
                     <div className={styles.bookInfo}>
                         <img src='./logo192.png'></img>
@@ -42,6 +43,8 @@ class BookContent extends Component {
                     <p>books5</p>
                 </div>
             </div>
+            </>
+            
         );
     }
 }

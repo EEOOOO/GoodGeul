@@ -1,8 +1,8 @@
 .app {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  //position: absolute;
+  position: absolute;
 }
 .sideNavBar {
   height: 100vh;

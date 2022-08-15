@@ -4,9 +4,10 @@
 .bookContent {
   display: flex;
   height: 100vh;
-  width: 100%;
 }
-
+.bookContent div {
+  flex: 1 1 1;
+}
 .book {
   display: flex;
   flex-direction: column;

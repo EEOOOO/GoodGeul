@@ -33,7 +33,7 @@ function App() {
     <>
       <div className={styles.app}>
         <SideNavBar />
-        <MyBooks className={styles.bookContent} books={books} saveBook={saveBook}/>
+        <MyBooks className={styles.bookContent}books={books} saveBook={saveBook}/>
       </div>
       <Outlet/>
     </>
