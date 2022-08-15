@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.loginBox {
+  height: 100%;
+}
+.loginBox h1 {
+  color: white;
+  font-size: 3rem;
+  font-weigth: 700;
+  margin-bottom: 50%;
+}
+.loginButtons {
+  display: flex;
+  flex-direction: column;
+}
+.loginButtons button {
+  border: 1px solid white;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}

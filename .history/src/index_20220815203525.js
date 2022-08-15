@@ -8,12 +8,12 @@ import {BrowserRouter, Routes,Route, Link} from 'react-router-dom';
 import MyBooks from './mybooks/MyBooks';
 import BookContent from './BookContent/BookContent';
 import AuthService from './services/auth_service';
-const authService = new AuthService();
+const auth = new AuthService();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login authService={authService}/>}>
+      <Route path="/" element={<Login onlogin={auth}/>}>
         <Route path="mybook" element={<MyBooks />}/>
         <Route path="bookContent" element={<BookContent />}/>
       </Route>

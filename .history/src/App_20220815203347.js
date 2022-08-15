@@ -2,7 +2,7 @@ import styles from './app.module.css';
 import MyBooks from './mybooks/MyBooks';
 import SideNavBar from './sidenavbar/SideNavBar';
 import {Outlet, Link} from 'react-router-dom';
-import database from './services/db_service';
+import database from './db_service';
 import {ref, set, get, child} from "firebase/database";
 import BookContent from './BookContent/BookContent';
 

@@ -1,0 +1,25 @@
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import app from './firebase';
+class AuthService{
+    constructor(){
+        this.googleProvider = new GoogleAuthProvider();
+        this.githubProvider = new GithubAuthProvider();
+    }
+    login(providerName){
+        const provider = this.getProvider(providerName);
+        
+        const auth = getAuth(app);
+        return signInWithPopup(auth, provider)
+    }
+    getProvider(providerName){
+        switch(providerName){
+            case 'Google':
+                const provider = new GoogleAuthProvider();
+                break
+            case 'Github':
+                const provider = new GithubAuthProvider();
+        }
+    }
+}
+
+export default AuthService;

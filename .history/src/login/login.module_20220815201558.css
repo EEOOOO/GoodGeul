@@ -1,0 +1,40 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.loginBox {
+  text-align: center;
+  height: 100%;
+  color: white;
+}
+.loginBox h1 {
+  font-size: 3rem;
+  font-weigth: 700;
+}
+.loginBox p {
+  font-family: "Nanum Brush Script";
+  font-size: 1rem;
+}
+.loginButtons {
+  margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.loginButtons button {
+  border: 1px solid grey;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+.loginButtons button:hover {
+  box-shadow: 0 0 15px white;
+}
