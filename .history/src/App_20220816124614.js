@@ -3,16 +3,26 @@ import MyBooks from './mybooks/MyBooks';
 import SideNavBar from './sidenavbar/SideNavBar';
 import {Outlet,  useLocation} from 'react-router-dom';
 import database from './services/db_service';
-import {ref, set, get, child} from "firebase/database";
-import { useState } from 'react';
+import {ref, set, onValue, get, child} from "firebase/database";
+import BookContent from './BookContent/BookContent';
+
+
+var dbRef = ref(database);
+onValue(dbRef, (snapshot) => {
+  const data = snapshot.val();
+  console.log(data);
+});
+
+
+
+let books = [];
 
 function App() {
   const location = useLocation();
-  const userId = location.state.userId;
-  const [books, setBooks] = useState([]);
+  const state = location.state;
+  console.log(state);
 
-  let dbRef = ref(database);
-  const getData = (books) => {get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+  const getData = (books) => {get(child(dbRef, `users/${state.userId}`)).then((snapshot) => {
     if (snapshot.exists()) {
       let data = snapshot.val();
       Object.keys(data).forEach(key => {
@@ -26,12 +36,9 @@ function App() {
   })};
 
   getData(books);
-  //setBooks(books);
-  console.log(books);
 
   const saveBook = (id, title, author, description, Text) => {
-    set(ref(database,`users/${userId}/`+ id),{
-      id: id,
+    set(ref(database,`users/${state.userId}/`+ id),{
       title: title,
       author: author,
       description : description,
@@ -39,24 +46,11 @@ function App() {
     });
   }
 
-  const updateBookList = (book) => {
-    const newBookList = [...books, book];
-    setBooks({newBookList});
-    const {id, title, author, description} = book
-    saveBook(id, title, author, description, 'Text')
-  }
-
-
   return (
     <>
       <div className={styles.app}>
         <SideNavBar />
-        <MyBooks 
-        className={styles.bookContent} 
-        books={books} 
-        saveBook={saveBook}
-        updateBookList={updateBookList}
-        />
+        <MyBooks className={styles.bookContent} books={books} saveBook={saveBook}/>
       </div>
       <Outlet/>
     </>

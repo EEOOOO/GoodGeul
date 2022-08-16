@@ -4,15 +4,22 @@ import SideNavBar from './sidenavbar/SideNavBar';
 import {Outlet,  useLocation} from 'react-router-dom';
 import database from './services/db_service';
 import {ref, set, get, child} from "firebase/database";
+import BookContent from './BookContent/BookContent';
 import { useState } from 'react';
+
+
+var dbRef = ref(database);
+
+
+let books = [];
 
 function App() {
   const location = useLocation();
-  const userId = location.state.userId;
+  const state = location.state;
   const [books, setBooks] = useState([]);
+  console.log(state);
 
-  let dbRef = ref(database);
-  const getData = (books) => {get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+  const getData = (books) => {get(child(dbRef, `users/${state.userId}`)).then((snapshot) => {
     if (snapshot.exists()) {
       let data = snapshot.val();
       Object.keys(data).forEach(key => {
@@ -26,11 +33,17 @@ function App() {
   })};
 
   getData(books);
-  //setBooks(books);
   console.log(books);
 
+  const updateBookList = (book) => {
+    const newBookList = [...books, book];
+    this.setBooks({newBookList});
+    const {id, title, author, description} = book
+    this.props.saveBook(id, title, author, description, 'Text')
+  }
+
   const saveBook = (id, title, author, description, Text) => {
-    set(ref(database,`users/${userId}/`+ id),{
+    set(ref(database,`users/${state.userId}/`+ id),{
       id: id,
       title: title,
       author: author,
@@ -38,14 +51,6 @@ function App() {
       Text : Text
     });
   }
-
-  const updateBookList = (book) => {
-    const newBookList = [...books, book];
-    setBooks({newBookList});
-    const {id, title, author, description} = book
-    saveBook(id, title, author, description, 'Text')
-  }
-
 
   return (
     <>

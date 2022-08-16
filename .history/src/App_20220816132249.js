@@ -26,8 +26,13 @@ function App() {
   })};
 
   getData(books);
-  //setBooks(books);
-  console.log(books);
+
+  const updateBookList = (book) => {
+    const newBookList = [...books, book];
+    setBooks({newBookList});
+    const {id, title, author, description} = book
+    saveBook(id, title, author, description, 'Text')
+  }
 
   const saveBook = (id, title, author, description, Text) => {
     set(ref(database,`users/${userId}/`+ id),{
@@ -38,14 +43,6 @@ function App() {
       Text : Text
     });
   }
-
-  const updateBookList = (book) => {
-    const newBookList = [...books, book];
-    setBooks({newBookList});
-    const {id, title, author, description} = book
-    saveBook(id, title, author, description, 'Text')
-  }
-
 
   return (
     <>

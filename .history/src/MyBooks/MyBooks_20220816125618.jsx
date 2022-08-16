@@ -9,7 +9,7 @@ class MyBooks extends React.Component{
             bookList: this.props.books,
             showPopUp : false,            
         };
-        this.updateBookList = this.props.updateBookList.bind(this);
+        this.updateBookList = this.updateBookList.bind(this);
     }
     handleTextSubmit=()=>{
         console.dir(this.props.myEditor.state.editorState);
@@ -20,7 +20,12 @@ class MyBooks extends React.Component{
             showPopUp : !this.state.showPopUp
         });
     }
-    
+    updateBookList = (book) => { //state undefined고치려고 일단 시도됨.
+        const newBookList = [...this.state.bookList, book];
+        this.setState({bookList:newBookList});
+        const {id, title, author, description} = book
+        this.props.saveBook(id, title, author, description, 'Text')
+    }
     render(){
         return <div className={styles.myBooks}>
             

@@ -5,6 +5,7 @@ import styles from './mybooks.module.css';
 class MyBooks extends React.Component{
     constructor(props){
         super(props);
+        console.log('props',this.props.books);
         this.state = {
             bookList: this.props.books,
             showPopUp : false,            

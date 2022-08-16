@@ -26,7 +26,7 @@ function App() {
   })};
 
   getData(books);
-  //setBooks(books);
+  
   console.log(books);
 
   const saveBook = (id, title, author, description, Text) => {
@@ -46,6 +46,7 @@ function App() {
     saveBook(id, title, author, description, 'Text')
   }
 
+  updateBookList();
 
   return (
     <>
