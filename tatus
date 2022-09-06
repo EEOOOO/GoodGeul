@@ -1,0 +1,21 @@
+* [33m[2022-08-16][m [32m[544880c][m | [37mUpdate: Lifting up the updateBookList method and state of the books to App from MyBooks [1;31m{{WooYoon-local}}[m [34m (HEAD -> main, origin/main)[m
+* [33m[2022-08-15][m [32m[9676eae][m | [37mFeat: connet App and RealtimeDatabase from firebase [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-15][m [32m[ba7cdc0][m | [37mStyle: MyBooks Component, BookContent Component [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-15][m [32m[9a8cee6][m | [37mFix: fix login service to render App after login [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-15][m [32m[4a9a805][m | [37mFeat: add a Login Service to save each user's data in their personal database [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-11][m [32m[6979d90][m | [37mFeat: make a BookContent Component to show clicked book's content [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-09][m [32m[5d55634][m | [37mStyle: make book to wrapped in list, and style the scroll bar [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-09][m [32m[ef1f8d9][m | [37mFeat: add closing function to popUp box [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-09][m [32m[b0f3237][m | [37mFix: give a key with Date&time to new book object [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-09][m [32m[2344765][m | [37mFix: make bookPopUp working to add book into booklist and render it [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-08][m [32m[4b3dc52][m | [37mFeat: add bookPopUp Component to add New Book with with information [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-05][m [32m[8fa440c][m | [37mStyle: a bit of styling on MyBooks Component [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-05][m [32m[bd6e84d][m | [37mFeat: add Header in MyBooks Component [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-04][m [32m[93ac2c7][m | [37mFeat: add SideNavBar Component: to set Navbar on the left-side of the app [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-04][m [32m[7e807e6][m | [37mFeat: add Books Component: to display books of book List [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-02][m [32m[6b07122][m | [37mCreate README.md [1;31m{{WooYoon Lee}}[m [34m[m
+*   [33m[2022-08-02][m [32m[845ca1b][m | [37mremove the conflict file README.md [1;31m{{WooYoon-local}}[m [34m[m
+[32m|[m[33m\[m  
+[32m|[m * [33m[2022-08-02][m [32m[bc89106][m | [37mInitial commit [1;31m{{WooYoon Lee}}[m [34m[m
+* [33m[2022-08-02][m [32m[a2662fe][m | [37mTesting setup [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-08-02][m [32m[9bc66dd][m | [37mInitialize project using Create React App [1;31m{{WooYoon-local}}[m [34m[m
